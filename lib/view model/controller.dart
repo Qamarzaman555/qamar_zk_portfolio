@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../view/about_me/about_me.dart';
 import '../view/certifications/certifications.dart';
 import '../view/intro/introduction.dart';
 import '../view/projects/project_view.dart';
@@ -42,16 +43,7 @@ class CustomPageController extends GetxController {
 
   List<Widget> screens = [
     const Introduction(),
-    SizedBox(
-      height: MediaQuery.sizeOf(Get.context!).height,
-      width: double.infinity,
-      child: const Center(
-        child: Text(
-          'About Me',
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
-    ),
+    const AboutMe(),
     ProjectsView(),
     Certifications(),
     SizedBox(
