@@ -10,12 +10,13 @@ class TopNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.all(defaultPadding),
+            padding: const EdgeInsets.all(defaultPadding / 2),
             child: !Responsive.isLargeMobile(context)
                 ? Image.asset('assets/images/image.png')
                 : MenuButton(

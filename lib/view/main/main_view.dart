@@ -17,7 +17,7 @@ class MainView extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(
-              height: 80,
+              height: 60,
               child: TopNavigationBar(),
             ),
             if (Responsive.isLargeMobile(context))

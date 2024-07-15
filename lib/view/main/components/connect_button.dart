@@ -9,7 +9,7 @@ class ConnectButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+      padding: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
       child: InkWell(
         onTap: () {
           launchUrl(Uri.parse('https://wa.me/03159392193'));
