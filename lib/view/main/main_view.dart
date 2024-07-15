@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../view%20model/controller.dart';
-import '../../res/constants.dart';
 import '../../view/main/components/navigation_bar.dart';
 import '../../view model/responsive.dart';
 import 'components/drawer/drawer.dart';
 import 'components/navigation_button_list.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 class MainView extends StatelessWidget {
   const MainView({super.key, required this.pages});
@@ -19,13 +17,6 @@ class MainView extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            kIsWeb && !Responsive.isLargeMobile(context)
-                ? const SizedBox(
-                    height: defaultPadding * 2,
-                  )
-                : const SizedBox(
-                    height: defaultPadding / 2,
-                  ),
             const SizedBox(
               height: 80,
               child: TopNavigationBar(),
