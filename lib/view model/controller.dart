@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../view/certifications/certifications.dart';
+import '../view/intro/introduction.dart';
+import '../view/projects/project_view.dart';
+
 class CustomPageController extends GetxController {
   final RxInt selectedIndex = 0.obs;
   final offset = 0.obs;
-  final PageController pageController = PageController();
+  final scrollController = ScrollController();
+  final List<bool> isHovered = List.generate(5, (_) => false).obs;
 
   @override
   void onInit() {
     super.onInit();
-    pageController.addListener(() {
-      offset.value = pageController.offset.toInt();
+    scrollController.addListener(() {
+      offset.value = scrollController.offset.toInt();
     });
   }
 
   @override
   void onClose() {
-    pageController.dispose();
+    scrollController.dispose();
     super.onClose();
   }
 
@@ -24,10 +29,42 @@ class CustomPageController extends GetxController {
     selectedIndex.value = index;
     final targetOffset = index * MediaQuery.of(context).size.height;
 
-    pageController.animateTo(
+    scrollController.animateTo(
       targetOffset,
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
     );
   }
+
+  void onHover(int index, bool isHovered) {
+    this.isHovered[index] = isHovered;
+  }
+
+  List<Widget> screens = [
+    const Introduction(),
+
+    SizedBox(
+      height: MediaQuery.sizeOf(Get.context!).height,
+      width: double.infinity,
+      child: const Center(
+        child: Text(
+          '1st Screen',
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
+    ),
+    SizedBox(
+      height: MediaQuery.sizeOf(Get.context!).height,
+      width: double.infinity,
+      child: const Center(
+        child: Text(
+          '3st Screen',
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
+    ),
+
+    // ProjectsView(),
+    // Certifications(),
+  ];
 }

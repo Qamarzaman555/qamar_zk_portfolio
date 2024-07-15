@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../res/constants.dart';
-import '../../view/home/home.dart';
 import '../../view/intro/components/animated_texts_componenets.dart';
 import '../../view/splash/componenets/animated_loading_text.dart';
+import '../main/main_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -19,7 +19,7 @@ class _SplashViewState extends State<SplashView> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomePage(),
+            builder: (context) => const MainView(),
           ));
     });
   }

@@ -8,8 +8,10 @@ class Introduction extends StatelessWidget {
   const Introduction({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Row(
+    return SizedBox(
+      height: MediaQuery.sizeOf(context).height,
+      width: double.infinity,
+      child: Row(
         children: [
           SizedBox(
             width: MediaQuery.sizeOf(context).width * 0.01,

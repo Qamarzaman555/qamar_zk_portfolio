@@ -7,8 +7,7 @@ import 'components/drawer/drawer.dart';
 import 'components/navigation_button_list.dart';
 
 class MainView extends StatelessWidget {
-  const MainView({super.key, required this.pages});
-  final List<Widget> pages;
+  const MainView({super.key});
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(CustomPageController());
@@ -27,15 +26,30 @@ class MainView extends StatelessWidget {
               ),
             Expanded(
               flex: 9,
-              child: PageView(
-                scrollDirection: Axis.vertical,
-                physics: const NeverScrollableScrollPhysics(),
-                controller: controller.pageController,
-                children: [...pages],
+              child: ListView.builder(
+                controller: controller.scrollController,
+                itemCount: controller.screens.length,
+                itemBuilder: (context, index) {
+                  return controller.screens[index];
+                },
               ),
             )
           ],
         ),
+      ),
+      floatingActionButton: Obx(
+        () => controller.offset.value > 0
+            ? FloatingActionButton.small(
+                backgroundColor: const Color(0xff353333),
+                onPressed: () {
+                  controller.selectTab(0, context);
+                },
+                child: const Icon(
+                  Icons.keyboard_arrow_up,
+                  color: Colors.white,
+                ),
+              )
+            : const SizedBox(),
       ),
     );
   }
