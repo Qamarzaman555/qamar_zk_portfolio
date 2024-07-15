@@ -16,7 +16,7 @@ class NavigationTextButton extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .labelMedium!
-              .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+              .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
         ));
   }
 }

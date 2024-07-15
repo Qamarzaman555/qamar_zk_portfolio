@@ -17,7 +17,7 @@ class TopNavigationBar extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(defaultPadding),
             child: !Responsive.isLargeMobile(context)
-                ? Image.asset('assets/images/triange_icon.png')
+                ? Image.asset('assets/images/image.png')
                 : MenuButton(
                     onTap: () => Scaffold.of(context).openDrawer(),
                   ),

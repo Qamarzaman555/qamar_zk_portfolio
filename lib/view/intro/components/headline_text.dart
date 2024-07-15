@@ -13,7 +13,7 @@ class MyPortfolioText extends StatelessWidget {
         builder: (context, value, child) {
           return Text('My Personal Portfolio',
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: Colors.white,
+                  // color: Colors.white,
                   fontWeight: FontWeight.w900,
                   height: 0,
                   fontSize: value));

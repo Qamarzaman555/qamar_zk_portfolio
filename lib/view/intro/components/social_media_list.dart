@@ -22,7 +22,7 @@ class SocialMediaIconList extends StatelessWidget {
                 child: Text(
                   'Follow Me',
                   style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
@@ -33,7 +33,7 @@ class SocialMediaIconList extends StatelessWidget {
                 margin:
                     const EdgeInsets.symmetric(vertical: defaultPadding * 0.5),
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(defaultPadding)),
               ),
               const SocialMediaIconColumn(),
