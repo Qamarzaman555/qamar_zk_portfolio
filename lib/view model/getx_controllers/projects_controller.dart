@@ -1,9 +1,19 @@
 import 'package:get/get.dart';
+import 'package:carousel_slider/carousel_controller.dart';
+import '../../model/project_model.dart';
 
 class ProjectController extends GetxController {
-  RxList<bool> hovers = List.generate(9, (_) => false).obs;
+  final CarouselController carouselController = CarouselController();
+  var hovers = <bool>[].obs;
+  var currentPage = 0.obs;
 
-  onHover(int index, bool value) {
-    hovers[index] = value;
+  @override
+  void onInit() {
+    hovers.addAll(List.filled(projectList.length, false));
+    super.onInit();
+  }
+
+  void onHover(int index, bool isHovered) {
+    hovers[index] = isHovered;
   }
 }

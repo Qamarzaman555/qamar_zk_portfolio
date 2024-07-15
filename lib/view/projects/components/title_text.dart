@@ -1,64 +1,43 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-
+import '../../../view/intro/components/subtitle_text.dart';
 import '../../../view model/responsive.dart';
 
-class TitleText extends StatelessWidget {
-  const TitleText({super.key, required this.prefix, required this.title});
-
-  final String prefix;
-  final String title;
+class CombinePojectsTitle extends StatelessWidget {
+  const CombinePojectsTitle({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          '$prefix ',
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              color: Colors.white,
-              fontSize: !Responsive.isDesktop(context)
-                  ? Responsive.isLargeMobile(context)
-                      ? 20
-                      : 30
-                  : 50,
-              fontWeight: FontWeight.bold),
+        const Responsive(
+          desktop: AnimatedSubtitleText(
+              start: 30, end: 40, text: 'My ', color: Colors.black),
+          largeMobile: AnimatedSubtitleText(
+              start: 30, end: 25, text: 'My ', color: Colors.black),
+          mobile: AnimatedSubtitleText(
+              start: 25, end: 20, text: 'My ', color: Colors.black),
+          tablet: AnimatedSubtitleText(
+              start: 40, end: 30, text: 'My ', color: Colors.black),
         ),
-        kIsWeb && Responsive.isDesktop(context)
-            ? ShaderMask(
-                shaderCallback: (bounds) {
-                  return const LinearGradient(
-                      end: Alignment.centerRight,
-                      begin: Alignment.centerLeft,
-                      colors: [
-                        Colors.pink,
-                        Colors.cyanAccent,
-                      ]).createShader(bounds);
-                },
-                child: Text(
-                  title,
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      color: Colors.white,
-                      fontSize: !Responsive.isDesktop(context)
-                          ? Responsive.isLargeMobile(context)
-                              ? 20
-                              : 30
-                          : 50,
-                      fontWeight: FontWeight.bold),
-                ),
-              )
-            : Text(
-                title,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: Colors.white,
-                    fontSize: !Responsive.isDesktop(context)
-                        ? Responsive.isLargeMobile(context)
-                            ? 20
-                            : 30
-                        : 50,
-                    fontWeight: FontWeight.bold),
-              ),
+        ShaderMask(
+          shaderCallback: (bounds) {
+            return const LinearGradient(colors: [
+              Colors.pink,
+              Colors.blue,
+            ]).createShader(bounds);
+          },
+          child: const Responsive(
+            desktop: AnimatedSubtitleText(
+                start: 30, end: 40, text: 'Projects ', gradient: false),
+            largeMobile: AnimatedSubtitleText(
+                start: 30, end: 25, text: 'Projects ', gradient: false),
+            mobile: AnimatedSubtitleText(
+                start: 25, end: 20, text: 'Projects ', gradient: true),
+            tablet: AnimatedSubtitleText(
+                start: 40, end: 30, text: 'Projects ', gradient: false),
+          ),
+        )
       ],
     );
   }

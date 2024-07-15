@@ -21,7 +21,7 @@ class Certifications extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: 'Certifications & ', title: 'License'),
+          const CombinePojectsTitle(),
           const SizedBox(
             height: defaultPadding,
           ),

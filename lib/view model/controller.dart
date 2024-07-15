@@ -42,9 +42,9 @@ class CustomPageController extends GetxController {
   }
 
   List<Widget> screens = [
+    ProjectsView(),
     const Introduction(),
     const AboutMe(),
-    ProjectsView(),
     Certifications(),
     SizedBox(
       height: MediaQuery.sizeOf(Get.context!).height,
