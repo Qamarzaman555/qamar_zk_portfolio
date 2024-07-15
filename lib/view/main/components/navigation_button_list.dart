@@ -21,14 +21,18 @@ class NavigationButtonList extends StatelessWidget {
               NavigationTextButton(
                   onTap: () => controller.selectTab(0, context), text: 'Home'),
               if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: 'About Me'),
-              NavigationTextButton(
-                  onTap: () => controller.selectTab(1, context),
-                  text: 'Projects'),
+                NavigationTextButton(
+                    onTap: () => controller.selectTab(1, context),
+                    text: 'About Me'),
               NavigationTextButton(
                   onTap: () => controller.selectTab(2, context),
+                  text: 'Projects'),
+              NavigationTextButton(
+                  onTap: () => controller.selectTab(3, context),
                   text: 'Certifications'),
-              NavigationTextButton(onTap: () {}, text: 'Achievements'),
+              NavigationTextButton(
+                  onTap: () => controller.selectTab(4, context),
+                  text: 'Contact Me'),
             ],
           ),
         );

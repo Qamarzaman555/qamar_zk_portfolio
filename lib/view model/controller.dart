@@ -42,29 +42,27 @@ class CustomPageController extends GetxController {
 
   List<Widget> screens = [
     const Introduction(),
-
     SizedBox(
       height: MediaQuery.sizeOf(Get.context!).height,
       width: double.infinity,
       child: const Center(
         child: Text(
-          '1st Screen',
+          'About Me',
           style: TextStyle(color: Colors.black),
         ),
       ),
     ),
+    ProjectsView(),
+    Certifications(),
     SizedBox(
       height: MediaQuery.sizeOf(Get.context!).height,
       width: double.infinity,
       child: const Center(
         child: Text(
-          '3st Screen',
+          'Contact Me',
           style: TextStyle(color: Colors.black),
         ),
       ),
     ),
-
-    // ProjectsView(),
-    // Certifications(),
   ];
 }

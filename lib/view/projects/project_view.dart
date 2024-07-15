@@ -11,8 +11,10 @@ class ProjectsView extends StatelessWidget {
   final controller = Get.put(ProjectController());
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
+    return SizedBox(
+      height: MediaQuery.sizeOf(context).height,
+      width: double.infinity,
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (Responsive.isLargeMobile(context))
