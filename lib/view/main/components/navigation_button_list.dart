@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../view%20model/controller.dart';
-import '../../../view%20model/responsive.dart';
 
 import 'navigation_button.dart';
 
@@ -20,10 +19,9 @@ class NavigationButtonList extends StatelessWidget {
             children: [
               NavigationTextButton(
                   onTap: () => controller.selectTab(0, context), text: 'Home'),
-              if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(
-                    onTap: () => controller.selectTab(1, context),
-                    text: 'About Me'),
+              NavigationTextButton(
+                  onTap: () => controller.selectTab(1, context),
+                  text: 'About Me'),
               NavigationTextButton(
                   onTap: () => controller.selectTab(2, context),
                   text: 'Projects'),
