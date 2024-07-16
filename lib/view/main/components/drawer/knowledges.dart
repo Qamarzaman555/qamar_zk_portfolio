@@ -15,7 +15,7 @@ class Knowledges extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Text(
             'Knowledge',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.black),
           ),
         ),
         KnowledgeText(knowledge: 'Flutter, Dart'),

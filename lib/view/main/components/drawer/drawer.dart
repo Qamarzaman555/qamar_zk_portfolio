@@ -11,13 +11,13 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: primaryColor,
+      backgroundColor: bgColor.withOpacity(0.55),
       child: SingleChildScrollView(
         child: Column(
           children: [
             const About(),
             Container(
-              color: bgColor,
+              color: Colors.white54,
               child: const Padding(
                 padding: EdgeInsets.all(defaultPadding / 2),
                 child: Column(

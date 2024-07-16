@@ -21,7 +21,7 @@ class ContactMeView extends StatelessWidget {
             ? const EdgeInsets.symmetric(horizontal: 24, vertical: 12)
             : const EdgeInsets.only(top: 60, left: 24, right: 24, bottom: 120),
         decoration: BoxDecoration(
-            color: Colors.orange, borderRadius: BorderRadius.circular(20)),
+            color: Colors.black12, borderRadius: BorderRadius.circular(20)),
         child: Padding(
           padding: responsive
               ? const EdgeInsets.symmetric(horizontal: 24, vertical: 12)

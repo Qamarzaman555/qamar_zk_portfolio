@@ -23,7 +23,7 @@ class ContactMeFormDesktop extends StatelessWidget {
                 style: Theme.of(context)
                     .primaryTextTheme
                     .titleSmall!
-                    .copyWith(color: Colors.white54, fontSize: 12),
+                    .copyWith(color: Colors.black, fontSize: 12),
               ),
               const SizedBox(height: 8),
               UKTextField(
@@ -47,7 +47,7 @@ class ContactMeFormDesktop extends StatelessWidget {
                           style: Theme.of(context)
                               .primaryTextTheme
                               .titleSmall!
-                              .copyWith(color: Colors.white54, fontSize: 12),
+                              .copyWith(color: Colors.black, fontSize: 12),
                         ),
                         const SizedBox(height: 8),
                         UKTextField(
@@ -72,7 +72,7 @@ class ContactMeFormDesktop extends StatelessWidget {
                           style: Theme.of(context)
                               .primaryTextTheme
                               .titleSmall!
-                              .copyWith(color: Colors.white54, fontSize: 12),
+                              .copyWith(color: Colors.black, fontSize: 12),
                         ),
                         const SizedBox(height: 8),
                         UKTextField(
@@ -95,7 +95,7 @@ class ContactMeFormDesktop extends StatelessWidget {
                 style: Theme.of(context)
                     .primaryTextTheme
                     .titleSmall!
-                    .copyWith(color: Colors.white54, fontSize: 12),
+                    .copyWith(color: Colors.black, fontSize: 12),
               ),
               const SizedBox(height: 8),
               UKTextField(

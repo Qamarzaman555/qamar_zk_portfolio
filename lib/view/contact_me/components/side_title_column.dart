@@ -21,27 +21,25 @@ class SideTitle extends StatelessWidget {
         const SizedBox(height: 20),
         Row(
           children: [
-            const Icon(Icons.phone_outlined, color: Colors.white30, size: 24),
-            Text(
-              '+923159392193',
-              style: Theme.of(context)
-                  .primaryTextTheme
-                  .titleSmall
-                  ?.copyWith(color: Colors.white30),
-            ),
+            const Icon(Icons.phone_outlined, color: Colors.black38, size: 24),
+            Text('+923159392193',
+                style: Theme.of(context)
+                    .primaryTextTheme
+                    .titleSmall!
+                    .apply(color: Colors.black38)),
           ],
         ),
         const SizedBox(height: 8),
         Row(
           children: [
             const Icon(Icons.mail_outline_outlined,
-                color: Colors.white30, size: 24),
+                color: Colors.black38, size: 24),
             Text(
               'qamarzk12345@gmail.com',
               style: Theme.of(context)
                   .textTheme
                   .titleSmall
-                  ?.copyWith(color: Colors.white30),
+                  ?.apply(color: Colors.black38),
             ),
           ],
         ),

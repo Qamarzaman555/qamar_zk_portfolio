@@ -28,7 +28,7 @@ List<CertificateModel> certificateList = [
     skills:
         'Flutter . Android Development . Web Development . Stacked . RestApi . Firebase . Responsiveness . Swagger . Docker ',
     credential:
-        'https://www.linkedin.com/learning/certificates/450fc4e2f495726aea50a067caf586869ccf0cb92ebcc5a4c7b5648a95754a8f',
+        'https://drive.google.com/file/d/1Quvpv7rEmgfGKboZYWafhLFwdd0P_I8q/view?usp=sharing',
   ),
   CertificateModel(
     name: 'Flutter Intern',
@@ -36,6 +36,14 @@ List<CertificateModel> certificateList = [
     date: '1 month',
     skills: 'Flutter . Dart . Firebase . RestApi . Notifications',
     credential:
-        'https://www.udemy.com/certificate/UC-5b01c756-0d20-4342-94e6-9d5860d1c95e/',
+        'https://drive.google.com/file/d/1rsdpYg5kAGZZQuCNN8EsiCt6OqctBlJP/view?usp=sharing',
+  ),
+  CertificateModel(
+    name: 'Flutter Bootcamp',
+    organization: 'Flutter Bootcamp by GDSC NUML',
+    date: '1 month',
+    skills: 'Flutter . Dart',
+    credential:
+        'https://drive.google.com/file/d/1TAwy91MPbvrh0cz0-ZF4Ww3FWvepd3t2/view?usp=sharing',
   ),
 ];

@@ -23,7 +23,7 @@ class PersonalInfo extends StatelessWidget {
         ),
         Text(
           'Skills',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         ),
         SizedBox(
           height: defaultPadding,

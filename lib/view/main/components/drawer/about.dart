@@ -9,7 +9,7 @@ class About extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: bgColor,
+        color: bgColor.withOpacity(0.55),
         child: Column(
           children: [
             const Spacer(
