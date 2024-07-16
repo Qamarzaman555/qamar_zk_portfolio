@@ -27,7 +27,7 @@ class NavigationButtonList extends StatelessWidget {
                   text: 'Projects'),
               NavigationTextButton(
                   onTap: () => controller.selectTab(3, context),
-                  text: 'Certifications'),
+                  text: 'Experience'),
               NavigationTextButton(
                   onTap: () => controller.selectTab(4, context),
                   text: 'Contact Me'),
