@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../constants/widgets/responsive/responsive.dart';
+
 class NavigationTextButton extends StatelessWidget {
   final VoidCallback onTap;
   final String text;
@@ -9,14 +11,24 @@ class NavigationTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-        onPressed: onTap,
-        child: Text(
-          text,
-          style: Theme.of(context)
-              .textTheme
-              .labelMedium!
-              .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
-        ));
+    return Responsive.isMobile(context)
+        ? TextButton(
+            onPressed: onTap,
+            child: Text(
+              text,
+              style: Theme.of(context)
+                  .textTheme
+                  .labelMedium!
+                  .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+            ))
+        : OutlinedButton(
+            onPressed: onTap,
+            child: Text(
+              text,
+              style: Theme.of(context)
+                  .textTheme
+                  .labelMedium!
+                  .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+            ));
   }
 }

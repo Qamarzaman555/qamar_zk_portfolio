@@ -10,7 +10,7 @@ class About extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: AppColors.bgColor.withOpacity(0.55),
+        color: AppColors.bgColor.withOpacity(0.9),
         child: Column(
           children: [
             const Spacer(
@@ -20,13 +20,19 @@ class About extends StatelessWidget {
             const Spacer(),
             Text(
               'Qamar Zaman',
-              style: Theme.of(context).textTheme.titleSmall,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleSmall!
+                  .apply(color: Colors.white),
             ),
-            SizedBox(height: AppSizes.defaultPadding / 4),
+            const SizedBox(height: AppSizes.defaultPadding / 4),
             const Text(
               'Flutter Developer',
               textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
+              style: TextStyle(
+                  fontWeight: FontWeight.w200,
+                  height: 1.5,
+                  color: Colors.white),
             ),
             const Spacer(
               flex: 2,

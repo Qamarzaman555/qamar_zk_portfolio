@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../constants/widgets/responsive/responsive.dart';
 import '../../../controllers/page_controller.dart';
 
 import 'navigation_button.dart';
@@ -8,6 +9,7 @@ class NavigationButtonList extends StatelessWidget {
   const NavigationButtonList({super.key});
   @override
   Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
     final controller = Get.put(CustomPageController());
     return TweenAnimationBuilder(
       tween: Tween(begin: 0.0, end: 1.0),
@@ -28,6 +30,7 @@ class NavigationButtonList extends StatelessWidget {
               NavigationTextButton(
                   onTap: () => controller.selectTab(3, context),
                   text: 'Experience'),
+              if (isMobile) const SizedBox(width: 6),
               NavigationTextButton(
                   onTap: () => controller.selectTab(4, context),
                   text: 'Contact Me'),

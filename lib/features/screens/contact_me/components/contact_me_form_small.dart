@@ -95,6 +95,8 @@ class ContactMeFormSmall extends StatelessWidget {
             SizedBox(
               width: 200,
               child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      side: const BorderSide(color: Colors.black)),
                   onPressed: controller.sendEmail,
                   child: const Row(
                     children: [

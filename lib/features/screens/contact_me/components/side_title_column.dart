@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../constants/widgets/title_text/title_text.dart';
 import '../../../../utils/constants/app_strings.dart';
+import 'combine_contacts_title_text.dart';
 
 class SideTitle extends StatelessWidget {
   const SideTitle({
@@ -13,7 +13,7 @@ class SideTitle extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CombineTitleText(text1: 'Contact', text2: 'Me'),
+        const CombineContactsTitleText(),
         Text(
           'Ask me anything or just say hi...',
           style:

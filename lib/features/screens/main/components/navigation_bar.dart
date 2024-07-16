@@ -10,7 +10,7 @@ class TopNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.transparent,
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

@@ -13,7 +13,7 @@ class MyImage extends StatelessWidget {
       child: Column(
         children: [
           Image(
-            image: AssetImage(AppImages.myPhoto),
+            image: AssetImage(AppImages.myPhotoNoBG),
             fit: BoxFit.fitHeight,
           ),
           Divider(
