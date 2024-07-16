@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../model/certificate_model.dart';
+import '../../../model/experience_model.dart';
 import '../../../view model/getx_controllers/experience_controller.dart';
 
 class OrganizationAndRole extends StatelessWidget {

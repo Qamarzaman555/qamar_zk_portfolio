@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../model/certificate_model.dart';
+import '../../../model/experience_model.dart';
 import '../../../view model/getx_controllers/experience_controller.dart';
 
 class SkillsAndCredentials extends StatelessWidget {
