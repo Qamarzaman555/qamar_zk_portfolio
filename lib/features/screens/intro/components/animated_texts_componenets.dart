@@ -38,7 +38,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
         final value = _controller.value;
         return Transform.translate(
           offset:
-              Offset(4 * value, 14 * value), // Move the container up and down
+              Offset(2 * value, 14 * value), // Move the container up and down
           child: Container(
             height: widget.height!,
             width: widget.width!,

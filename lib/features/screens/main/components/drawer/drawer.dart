@@ -18,7 +18,7 @@ class CustomDrawer extends StatelessWidget {
           children: [
             const About(),
             Container(
-              color: Colors.white54,
+              color: Colors.white54.withOpacity(0.9),
               child: const Padding(
                 padding: EdgeInsets.all(AppSizes.defaultPadding / 2),
                 child: Column(

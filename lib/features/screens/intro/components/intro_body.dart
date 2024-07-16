@@ -28,11 +28,11 @@ class IntroBody extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      width: size.width * 0.23,
+                      width: size.width * 0.16,
                     ),
                     const AnimatedImageContainer(
-                      width: 150,
-                      height: 200,
+                      width: 180,
+                      height: 230,
                     ),
                   ],
                 ),
