@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../features/view/intro/components/subtitle_text.dart';
+import '../../../features/screens/intro/components/subtitle_text.dart';
 import '../responsive/responsive.dart';
 
 class CombineTitleText extends StatelessWidget {

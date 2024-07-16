@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'features/view/splash/splash_view.dart';
+import 'features/screens/splash/splash_view.dart';
 import 'utils/constants/app_colors.dart.dart';
 
 void main() {

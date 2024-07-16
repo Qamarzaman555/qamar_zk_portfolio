@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../view/about_me/about_me.dart';
-import '../view/contact_me/contact_me.dart';
-import '../view/experiences/experience.dart';
-import '../view/intro/introduction.dart';
-import '../view/projects/project_view.dart';
+import '../screens/about_me/about_me.dart';
+import '../screens/contact_me/contact_me.dart';
+import '../screens/experiences/experience.dart';
+import '../screens/intro/introduction.dart';
+import '../screens/projects/project_view.dart';
 
 class CustomPageController extends GetxController {
   final RxInt selectedIndex = 0.obs;

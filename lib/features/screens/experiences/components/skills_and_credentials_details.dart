@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../../utils/data/projects_data.dart';
+import '../../../../utils/data/experience_data.dart';
 import '../../../controllers/experience_controller.dart';
 
 class SkillsAndCredentials extends StatelessWidget {
@@ -40,13 +40,13 @@ class SkillsAndCredentials extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Skills: ${ProjectsData.certificateList[index].skills}',
+                'Skills: ${ExperienceData.certificateList[index].skills}',
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              if (ProjectsData.certificateList[index].credential != null)
+              if (ExperienceData.certificateList[index].credential != null)
                 Container(
                   margin: const EdgeInsets.only(top: 8),
                   padding:
@@ -58,7 +58,7 @@ class SkillsAndCredentials extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () {
                       launchUrl(Uri.parse(
-                          ProjectsData.certificateList[index].credential!));
+                          ExperienceData.certificateList[index].credential!));
                     },
                     child: const Text(
                       'View Credential',

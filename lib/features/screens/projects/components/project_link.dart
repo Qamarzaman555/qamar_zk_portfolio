@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../model/project_model.dart';
+import '../../../../utils/data/projects_data.dart';
 
 class ProjectLinks extends StatelessWidget {
   final int index;
@@ -18,7 +18,7 @@ class ProjectLinks extends StatelessWidget {
                 overflow: TextOverflow.ellipsis),
             IconButton(
                 onPressed: () {
-                  launchUrl(Uri.parse(projectList[index].link));
+                  launchUrl(Uri.parse(ProjectsData.projectList[index].link));
                 },
                 icon: SvgPicture.asset('assets/icons/github.svg')),
           ],
@@ -26,7 +26,7 @@ class ProjectLinks extends StatelessWidget {
         const Spacer(),
         TextButton(
             onPressed: () {
-              launchUrl(Uri.parse(projectList[index].link));
+              launchUrl(Uri.parse(ProjectsData.projectList[index].link));
             },
             child: const Text(
               'Read More>>',

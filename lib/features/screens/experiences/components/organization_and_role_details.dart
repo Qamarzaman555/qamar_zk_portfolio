@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/data/projects_data.dart';
+import '../../../../utils/data/experience_data.dart';
 import '../../../controllers/experience_controller.dart';
 
 class OrganizationAndRole extends StatelessWidget {
@@ -35,21 +35,21 @@ class OrganizationAndRole extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              ProjectsData.certificateList[index].name,
+              ExperienceData.certificateList[index].name,
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              ProjectsData.certificateList[index].organization,
+              ExperienceData.certificateList[index].organization,
               style: const TextStyle(
                 fontSize: 15,
                 color: Colors.black45,
               ),
             ),
             Text(
-              ProjectsData.certificateList[index].date,
+              ExperienceData.certificateList[index].date,
               style: const TextStyle(
                 fontSize: 12,
                 color: Colors.black45,

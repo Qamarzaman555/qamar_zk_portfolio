@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_controller.dart';
-import '../model/project_model.dart';
+import '../../utils/data/projects_data.dart';
 
 class ProjectController extends GetxController {
   final CarouselController carouselController = CarouselController();
@@ -9,7 +9,7 @@ class ProjectController extends GetxController {
 
   @override
   void onInit() {
-    hovers.addAll(List.filled(projectList.length, false));
+    hovers.addAll(List.filled(ProjectsData.projectList.length, false));
     super.onInit();
   }
 

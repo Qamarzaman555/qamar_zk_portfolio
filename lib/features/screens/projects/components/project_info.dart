@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../utils/constants/app_sizes.dart';
+import '../../../../utils/data/projects_data.dart';
 import 'project_deatail.dart';
 import 'package:get/get.dart';
-import '../../../model/project_model.dart';
 import '../../../../utils/constants/app_colors.dart.dart';
 import '../../../controllers/projects_controller.dart';
 import 'image_viewer.dart';
@@ -18,7 +18,7 @@ class ProjectStack extends StatelessWidget {
         controller.onHover(index, value);
       },
       onTap: () {
-        ImageViewer(context, projectList[index].image);
+        ImageViewer(context, ProjectsData.projectList[index].image);
       },
       borderRadius: BorderRadius.circular(30),
       child: AnimatedContainer(

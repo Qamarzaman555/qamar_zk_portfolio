@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../utils/constants/app_sizes.dart';
+import '../../../../utils/data/projects_data.dart';
 import 'project_info.dart';
 import 'package:get/get.dart';
-import '../../../model/project_model.dart';
 import '../../../controllers/projects_controller.dart';
 
 class ProjectGrid extends StatelessWidget {
@@ -14,7 +14,7 @@ class ProjectGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      itemCount: projectList.length,
+      itemCount: ProjectsData.projectList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount, childAspectRatio: ratio),
       itemBuilder: (context, index) {

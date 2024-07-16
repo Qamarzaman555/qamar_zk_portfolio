@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../utils/data/projects_data.dart';
+import '../../../../utils/data/experience_data.dart';
 import '../../../controllers/experience_controller.dart';
 import 'card_background_image.dart';
 import 'organization_and_role_details.dart';
@@ -18,7 +18,7 @@ class CertificateGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      itemCount: ProjectsData.certificateList.length,
+      itemCount: ExperienceData.certificateList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount,
           childAspectRatio: ratio,

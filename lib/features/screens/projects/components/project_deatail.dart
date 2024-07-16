@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../utils/constants/app_sizes.dart';
+import '../../../../utils/data/projects_data.dart';
 import 'project_link.dart';
 
-import '../../../model/project_model.dart';
 import '../../../../constants/widgets/responsive/responsive.dart';
 
 class ProjectDetail extends StatelessWidget {
@@ -17,7 +17,7 @@ class ProjectDetail extends StatelessWidget {
         Align(
           alignment: Alignment.topCenter,
           child: Text(
-            projectList[index].name,
+            ProjectsData.projectList[index].name,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall!
@@ -34,7 +34,7 @@ class ProjectDetail extends StatelessWidget {
                 height: AppSizes.defaultPadding,
               ),
         Text(
-          projectList[index].description,
+          ProjectsData.projectList[index].description,
           style: const TextStyle(color: Colors.grey, height: 1.5),
           maxLines: size.width > 700 && size.width < 750
               ? 3

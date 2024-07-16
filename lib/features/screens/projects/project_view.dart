@@ -3,8 +3,9 @@ import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../constants/widgets/title_text/title_text.dart';
+import '../../../utils/constants/app_colors.dart.dart';
 import '../../../utils/constants/app_sizes.dart';
-import '../../model/project_model.dart';
+import '../../../utils/data/projects_data.dart';
 import '../../controllers/projects_controller.dart';
 import '../../../constants/widgets/responsive/responsive.dart';
 import 'components/project_info.dart';
@@ -35,7 +36,7 @@ class ProjectsView extends StatelessWidget {
                 children: [
                   CarouselSlider.builder(
                     carouselController: controller.carouselController,
-                    itemCount: projectList.length,
+                    itemCount: ProjectsData.projectList.length,
                     itemBuilder: (context, index, realIndex) {
                       return Obx(
                         () => AnimatedContainer(
@@ -82,12 +83,12 @@ class ProjectsView extends StatelessWidget {
                   Obx(
                     () => AnimatedSmoothIndicator(
                       activeIndex: controller.currentPage.value,
-                      count: projectList.length,
+                      count: ProjectsData.projectList.length,
                       effect: const WormEffect(
                         dotHeight: 12,
                         dotWidth: 12,
-                        activeDotColor: Colors.pinkAccent,
-                        dotColor: Colors.blue,
+                        dotColor: AppColors.bgColor,
+                        activeDotColor: Colors.amber,
                       ),
                     ),
                   ),
