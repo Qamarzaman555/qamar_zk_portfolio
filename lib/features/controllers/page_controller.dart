@@ -8,6 +8,7 @@ import '../screens/intro/introduction.dart';
 import '../screens/projects/project_view.dart';
 
 class CustomPageController extends GetxController {
+  static CustomPageController get instance => Get.find();
   final RxInt selectedIndex = 0.obs;
   final offset = 0.obs;
   final scrollController = ScrollController();
