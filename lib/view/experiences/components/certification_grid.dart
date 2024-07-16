@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../model/certificate_model.dart';
 import '../../../res/constants.dart';
-import '../../../view model/getx_controllers/certification_controller.dart';
+import '../../../view model/getx_controllers/experience_controller.dart';
 import 'certificates_details.dart';
+
 class CertificateGrid extends StatelessWidget {
   final int crossAxisCount;
   final double ratio;
-  CertificateGrid({super.key, this.crossAxisCount = 3,  this.ratio=1.3});
-  final controller = Get.put(CertificationController());
+  CertificateGrid({super.key, this.crossAxisCount = 3, this.ratio = 1.3});
+  final controller = Get.put(ExperienceController());
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       itemCount: certificateList.length,
-      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount, childAspectRatio: ratio),
       itemBuilder: (context, index) {
         return Obx(() => AnimatedContainer(
@@ -27,7 +28,7 @@ class CertificateGrid extends StatelessWidget {
                   Colors.pinkAccent,
                   Colors.blue,
                 ]),
-                boxShadow:  [
+                boxShadow: [
                   BoxShadow(
                     color: Colors.pink,
                     offset: const Offset(-2, 0),
@@ -36,10 +37,10 @@ class CertificateGrid extends StatelessWidget {
                   BoxShadow(
                     color: Colors.blue,
                     offset: const Offset(2, 0),
-                    blurRadius: controller.hovers[index] ? 20 : 10,),
+                    blurRadius: controller.hovers[index] ? 20 : 10,
+                  ),
                 ]),
-            child: CertificateStack(index: index)
-        ));
+            child: CertificateStack(index: index)));
       },
     );
   }

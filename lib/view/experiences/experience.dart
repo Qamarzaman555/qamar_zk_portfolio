@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../view%20model/getx_controllers/certification_controller.dart';
-import '../../view/projects/components/title_text.dart';
-import 'package:get/get.dart';
 import '../../res/constants.dart';
 import '../../view model/responsive.dart';
 import 'components/certification_grid.dart';
+import 'components/title_text.dart';
 
-class Certifications extends StatelessWidget {
-  final controller = Get.put(CertificationController());
-  Certifications({super.key});
+class ExperienceView extends StatelessWidget {
+  const ExperienceView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -21,7 +19,7 @@ class Certifications extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const CombinePojectsTitle(),
+          const CombineExperienceTitle(),
           const SizedBox(
             height: defaultPadding,
           ),
@@ -29,7 +27,7 @@ class Certifications extends StatelessWidget {
               child: Responsive(
                   desktop: CertificateGrid(
                     crossAxisCount: 3,
-                    ratio: 1.5,
+                    ratio: 1.6,
                   ),
                   extraLargeScreen:
                       CertificateGrid(crossAxisCount: 4, ratio: 1.6),
