@@ -8,8 +8,8 @@ import 'components/about_me_description.dart';
 import 'components/side_image.dart';
 import 'components/title_text.dart';
 
-class AboutMe extends StatelessWidget {
-  const AboutMe({super.key});
+class AboutMeView extends StatelessWidget {
+  const AboutMeView({super.key});
 
   @override
   Widget build(BuildContext context) {

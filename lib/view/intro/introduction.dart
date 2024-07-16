@@ -4,8 +4,8 @@ import '../../view/intro/components/intro_body.dart';
 import '../../view/intro/components/side_menu_button.dart';
 import '../../view/intro/components/social_media_list.dart';
 
-class Introduction extends StatelessWidget {
-  const Introduction({super.key});
+class IntroductionView extends StatelessWidget {
+  const IntroductionView({super.key});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
