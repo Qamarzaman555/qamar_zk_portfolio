@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'res/constants.dart';
-import 'view/splash/splash_view.dart';
+import 'features/view/splash/splash_view.dart';
+import 'utils/constants/app_colors.dart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
                 bodyColor: Colors.white,
               )
               .copyWith(
-                headlineMedium: const TextStyle(color: bodyTextColor),
-                headlineSmall: const TextStyle(color: bodyTextColor),
+                headlineMedium: const TextStyle(color: AppColors.bodyTextColor),
+                headlineSmall: const TextStyle(color: AppColors.bodyTextColor),
               ),
         ),
         home: const SplashView());
