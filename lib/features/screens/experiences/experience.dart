@@ -25,15 +25,14 @@ class ExperienceView extends StatelessWidget {
               child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Responsive(
-                desktop: CertificateGrid(
+                desktop: ExperianceGrid(
                   crossAxisCount: 3,
                   ratio: 1.5,
                 ),
-                extraLargeScreen:
-                    CertificateGrid(crossAxisCount: 4, ratio: 1.5),
-                largeMobile: CertificateGrid(crossAxisCount: 1, ratio: 1.6),
-                mobile: CertificateGrid(crossAxisCount: 1, ratio: 1.4),
-                tablet: CertificateGrid(
+                extraLargeScreen: ExperianceGrid(crossAxisCount: 4, ratio: 1.5),
+                largeMobile: ExperianceGrid(crossAxisCount: 1, ratio: 1.6),
+                mobile: ExperianceGrid(crossAxisCount: 1, ratio: 1.4),
+                tablet: ExperianceGrid(
                   ratio: 1.3,
                   crossAxisCount: 2,
                 )),
