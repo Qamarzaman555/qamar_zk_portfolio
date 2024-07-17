@@ -23,6 +23,7 @@ class ContactMeFormSmall extends StatelessWidget {
                   AppValidator.validateEmptyText('Enter full name', value),
               controller: controller.fullName,
               decoration: const InputDecoration(
+                  constraints: BoxConstraints.expand(height: 40),
                   labelStyle: TextStyle(fontWeight: FontWeight.w600),
                   prefixIcon: Icon(Iconsax.user),
                   labelText: 'Full name'),
@@ -41,6 +42,7 @@ class ContactMeFormSmall extends StatelessWidget {
                             AppValidator.validatePhoneNumber(value),
                         expands: false,
                         decoration: const InputDecoration(
+                          constraints: BoxConstraints.expand(height: 40),
                           label: Text('Phone number'),
                           prefixIcon: Icon(Iconsax.call),
                         ),
@@ -58,6 +60,7 @@ class ContactMeFormSmall extends StatelessWidget {
                         validator: (value) => AppValidator.validateEmail(value),
                         controller: controller.email,
                         decoration: const InputDecoration(
+                            constraints: BoxConstraints.expand(height: 40),
                             labelStyle: TextStyle(fontWeight: FontWeight.w600),
                             prefixIcon: Icon(Iconsax.direct_right),
                             labelText: 'Email'),
@@ -69,40 +72,35 @@ class ContactMeFormSmall extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Message
-            Obx(
-              () => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextFormField(
-                    controller: controller.message,
-                    maxLength: 500,
-                    maxLines: 5,
-                    onChanged: controller.updateCharCount,
-                    decoration: const InputDecoration(
-                      labelStyle: TextStyle(fontWeight: FontWeight.w600),
-                      prefixIcon: Icon(Iconsax.message),
-                      labelText: 'Message',
-                    ),
-                  ),
-                  Text(
-                    '${controller.messageCharCount}/500',
-                    style: const TextStyle(fontSize: 12, color: Colors.grey),
-                  ),
-                ],
+            TextFormField(
+              controller: controller.message,
+              maxLength: 500,
+              maxLines: 3,
+              onChanged: controller.updateCharCount,
+              decoration: const InputDecoration(
+                labelStyle: TextStyle(fontWeight: FontWeight.w600),
+                prefixIcon: Icon(Iconsax.message),
+                labelText: 'Message',
               ),
             ),
-            const SizedBox(height: 20),
+            // const SizedBox(height: 12),
             SizedBox(
-              width: 200,
+              width: 180,
+              height: 35,
               child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      side: const BorderSide(color: Colors.black)),
+                    side: const BorderSide(width: 1, color: Colors.grey),
+                  ),
                   onPressed: controller.sendEmail,
-                  child: const Row(
+                  child: Row(
                     children: [
-                      Text('Send'),
-                      Spacer(),
-                      Icon(Iconsax.arrow_right)
+                      Text('Send', style: TextStyle(color: Colors.grey[600])),
+                      const Spacer(),
+                      Icon(
+                        Iconsax.arrow_right_3,
+                        size: 18,
+                        color: Colors.grey[600],
+                      )
                     ],
                   )),
             )

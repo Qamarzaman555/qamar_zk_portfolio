@@ -15,15 +15,9 @@ class ContactMeView extends StatelessWidget {
         Responsive.isTablet(context);
     return SizedBox(
       width: MediaQuery.sizeOf(context).width,
-      height: MediaQuery.sizeOf(context).height,
+      height: MediaQuery.sizeOf(context).height / 1.5,
       child: Container(
-        margin: responsive
-            ? const EdgeInsets.symmetric(horizontal: 24, vertical: 12)
-            : const EdgeInsets.only(top: 60, left: 24, right: 24, bottom: 120),
-        decoration: BoxDecoration(
-            border: Border.all(width: 2, color: Colors.black),
-            color: Colors.black12,
-            borderRadius: BorderRadius.circular(20)),
+        decoration: const BoxDecoration(color: Colors.black12),
         child: Padding(
           padding: responsive
               ? const EdgeInsets.symmetric(horizontal: 24, vertical: 12)
@@ -31,7 +25,7 @@ class ContactMeView extends StatelessWidget {
           child: Column(
             children: [
               responsive ? const SideTitle() : const SizedBox.shrink(),
-              if (responsive) const SizedBox(height: 8),
+              if (responsive) const SizedBox(height: 4),
               const Responsive(
                 desktop: ContactMeFormDesktop(),
                 largeMobile: ContactMeFormSmall(),
