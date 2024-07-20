@@ -12,10 +12,11 @@ import 'components/project_info.dart';
 
 class ProjectsView extends StatelessWidget {
   ProjectsView({super.key});
-  final controller = Get.put(ProjectController());
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ProjectController());
+
     return SizedBox(
       height: MediaQuery.sizeOf(context).height,
       width: double.infinity,

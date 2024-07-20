@@ -17,7 +17,7 @@ class AboutMeView extends StatelessWidget {
     final responsive = (Responsive.isLargeMobile(context) ||
         (Responsive.isTablet(context)) ||
         (Responsive.isMobile(context)));
-    final controller = Get.find<CustomPageController>();
+    final controller = CustomPageController.instance;
 
     return SizedBox(
       child: Padding(
