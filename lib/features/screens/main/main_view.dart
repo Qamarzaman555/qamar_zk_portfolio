@@ -1,41 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controllers/page_controller.dart';
-import 'components/navigation_bar.dart';
-import '../../../constants/widgets/responsive/responsive.dart';
+import 'components/connect_button.dart';
 import 'components/drawer/drawer.dart';
 import 'components/navigation_button_list.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
+
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(CustomPageController());
+
     return Scaffold(
       drawer: const CustomDrawer(),
-      body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 60,
-              child: TopNavigationBar(),
+      body: CustomScrollView(
+        controller: controller.scrollController,
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Colors.white,
+            floating: true,
+            pinned: true,
+            expandedHeight: 80.0,
+            flexibleSpace: const FlexibleSpaceBar(title: Text('My Portfolio')),
+            leading: Builder(
+              builder: (context) {
+                return IconButton(
+                  icon: const Icon(Icons.menu),
+                  onPressed: () => Scaffold.of(context).openDrawer(),
+                );
+              },
             ),
-            if (Responsive.isLargeMobile(context))
-              const Row(
-                children: [Spacer(), NavigationButtonList(), Spacer()],
-              ),
-            Expanded(
-              flex: 9,
-              child: ListView.builder(
-                controller: controller.scrollController,
-                itemCount: controller.screens.length,
-                itemBuilder: (context, index) {
-                  return controller.screens[index];
-                },
-              ),
-            )
-          ],
-        ),
+            actions: const [
+              NavigationButtonList(),
+              ConnectButton(),
+            ],
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return controller.screens[index];
+              },
+              childCount: controller.screens.length,
+            ),
+          ),
+        ],
       ),
       floatingActionButton: Obx(
         () => controller.offset.value > 0

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../constants/widgets/responsive/responsive.dart';
 import 'components/intro_body.dart';
-import 'components/side_menu_button.dart';
 import 'components/social_media_list.dart';
 
 class IntroductionView extends StatelessWidget {
@@ -16,10 +15,6 @@ class IntroductionView extends StatelessWidget {
           SizedBox(
             width: MediaQuery.sizeOf(context).width * 0.01,
           ),
-          if (!Responsive.isLargeMobile(context))
-            MenuButton(
-              onTap: () => Scaffold.of(context).openDrawer(),
-            ),
           SizedBox(
             width: MediaQuery.sizeOf(context).width * 0.02,
           ),
