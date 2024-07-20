@@ -80,7 +80,7 @@ class ProjectsView extends StatelessWidget {
                       },
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
                   Obx(
                     () => AnimatedSmoothIndicator(
                       activeIndex: controller.currentPage.value,

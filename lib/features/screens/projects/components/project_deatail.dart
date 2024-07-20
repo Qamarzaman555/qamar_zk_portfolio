@@ -10,7 +10,6 @@ class ProjectDetail extends StatelessWidget {
   const ProjectDetail({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.sizeOf(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -27,32 +26,19 @@ class ProjectDetail extends StatelessWidget {
           ),
         ),
         Responsive.isMobile(context)
-            ? const SizedBox(
-                height: AppSizes.defaultPadding / 2,
-              )
+            ? const SizedBox.shrink()
             : const SizedBox(
                 height: AppSizes.defaultPadding,
               ),
         Text(
           ProjectsData.projectList[index].description,
           style: const TextStyle(color: Colors.grey, height: 1.5),
-          maxLines: size.width > 700 && size.width < 750
-              ? 3
-              : size.width < 470
-                  ? 2
-                  : size.width > 600 && size.width < 700
-                      ? 6
-                      : size.width > 900 && size.width < 1060
-                          ? 6
-                          : 4,
+          maxLines: 12,
           overflow: TextOverflow.ellipsis,
         ),
         const Spacer(),
         ProjectLinks(
           index: index,
-        ),
-        const SizedBox(
-          height: AppSizes.defaultPadding / 2,
         ),
       ],
     );

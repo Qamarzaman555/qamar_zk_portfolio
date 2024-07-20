@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_portfolio/constants/widgets/responsive/responsive.dart';
 import '../../controllers/page_controller.dart';
 import 'components/connect_button.dart';
 import 'components/drawer/drawer.dart';
@@ -22,7 +23,10 @@ class MainView extends StatelessWidget {
             floating: true,
             pinned: true,
             expandedHeight: 80.0,
-            flexibleSpace: const FlexibleSpaceBar(title: Text('My Portfolio')),
+            flexibleSpace: Responsive.isMobile(context) ||
+                    Responsive.isLargeMobile(context)
+                ? const SizedBox.shrink()
+                : const FlexibleSpaceBar(title: Text('My Portfolio')),
             leading: Builder(
               builder: (context) {
                 return IconButton(

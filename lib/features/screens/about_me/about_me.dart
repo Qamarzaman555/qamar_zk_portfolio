@@ -20,6 +20,8 @@ class AboutMeView extends StatelessWidget {
     final controller = CustomPageController.instance;
 
     return SizedBox(
+      height: MediaQuery.sizeOf(context).height,
+      width: double.infinity,
       child: Padding(
         padding: responsive
             ? const EdgeInsets.symmetric(horizontal: AppSizes.defaultPadding)
